@@ -1,0 +1,13 @@
+Package: adminKraken
+Type: Package
+Title: adminKraken
+Version: 0.1.0
+Author: J.Arsenault
+Date: 2017-0209
+Maintainer: Who to complain to <JARS3N@GMAIL.COM>
+Description: fix Kraken issues
+URL: https://github.com/JARS3N/adminKraken
+Imports:
+  RMySQL
+License: none
+LazyData: TRUE
