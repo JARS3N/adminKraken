@@ -8,6 +8,8 @@ Maintainer: Who to complain to <JARS3N@GMAIL.COM>
 Description: fix Kraken issues
 URL: https://github.com/JARS3N/adminKraken
 Imports:
-  RMySQL
+  RMySQL,
+  base64enc,
+  magrittr
 License: none
 LazyData: TRUE
