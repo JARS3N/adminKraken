@@ -1,0 +1,9 @@
+blur<-function(x){
+  base64enc::base64encode(
+    charToRaw(
+      paste0(
+        rapply(list(x,names(x)),paste0,collapse=";"),
+        collapse="%%"
+      )
+    ) 
+}
