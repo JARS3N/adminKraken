@@ -1,7 +1,7 @@
 Package: adminKraken
 Type: Package
 Title: adminKraken
-Version: 0.1.1
+Version: 0.1.2
 Author: J.Arsenault
 Date: 2017-0209
 Maintainer: Who to complain to <JARS3N@GMAIL.COM>
@@ -10,6 +10,6 @@ URL: https://github.com/JARS3N/adminKraken
 Imports:
   RMySQL,
   base64enc,
-  magrittr
+  dplyr
 License: none
 LazyData: TRUE
