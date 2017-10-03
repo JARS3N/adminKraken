@@ -1,12 +1,6 @@
 removeLLFile<-function(file){
   require(RMySQL)
-  ConnectInfo<-sharpen(triton())
-  my_db <- dbConnect(RMySQL::MySQL(),
-                     dbname=ConnectInfo[1],
-                     user=ConnectInfo[2],
-                     password=ConnectInfo[3],
-                     host=ConnectInfo[4],
-                     port=as.numeric(ConnectInfo[5]))
+  my_db <- con_mysql()
   # GEt Id of file to remove
   nm <-paste0("select ID from kraken.instqcllmeta where file=",shQuote(file),";")
   findID <-dbSendQuery(my_db,nm)
