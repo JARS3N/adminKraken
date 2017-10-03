@@ -24,13 +24,7 @@ if(is.null(extra)){
   }
 }
 require(RMySQL)
-ConnectInfo<-sharpen(triton())
-my_db <- dbConnect(RMySQL::MySQL(),
-                   dbname=ConnectInfo[1],
-                   user=ConnectInfo[2],
-                   password=ConnectInfo[3],
-                   host=ConnectInfo[4],
-                   port=as.numeric(ConnectInfo[5]))
+my_db <- con_mysql()
 x<-dbSendQuery(my_db,paste0(a,STR,";",b))
 dbClearResult(x)
 dbDisconnect(my_db)
