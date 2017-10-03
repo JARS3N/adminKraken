@@ -24,7 +24,7 @@ if(is.null(extra)){
   }
 }
 require(RMySQL)
-ConnectInfo<-DataStash::Triton()
+ConnectInfo<-sharpen(triton())
 my_db <- dbConnect(RMySQL::MySQL(),
                    dbname=ConnectInfo[1],
                    user=ConnectInfo[2],
