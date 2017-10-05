@@ -1,5 +1,5 @@
 con_mysql<-function(){
-requrire(RMySQL)
+require(RMySQL)
 ConnectInfo<-sharpen(triton())
 dbConnect(RMySQL::MySQL(),
                      dbname=ConnectInfo[1],
