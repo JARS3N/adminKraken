@@ -1,12 +1,8 @@
 removeCCCartridge<-function(Lot,sn=NULL,extra=NULL){
  a<-"SET SQL_SAFE_UPDATES = 0;"
  b<-"SET SQL_SAFE_UPDATES = 1;"
-  platstring<-unname(c(
-    "C" ="xfpwetqc",
-    "B" = "xfe24wetqc",
-    "W" = "xfe96wetqc",
-    "Q" = "xf24legacy"
-  )[substr(Lot,1,1)])
+  postbls<-wetqc_tbl()
+  platstring<-postbls[[substr(Lot,1,1)]]
   start<-"SET SQL_SAFE_UPDATES = 0;"
   end<-"SET SQL_SAFE_UPDATES = 1;"
   s1<-paste0("Delete FROM kraken.",platstring," where Lot = ")
